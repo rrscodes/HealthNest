@@ -3,7 +3,7 @@ import { Text, TouchableOpacity } from 'react-native';
 
 import theme from '../utils/theme';
 
-export default function Chip({ name, selected }) {
+export default function Chip({ name }) {
 	return (
 		<TouchableOpacity
 			style={[styles.chipContainer, { backgroundColor: name === 'All Posts' ? theme.LIGHT_GREEN : theme.LIGHT_COLOR }]}

@@ -35,6 +35,7 @@ export default StyleSheet.create({
 		paddingBottom: hp(7),
 	},
 	mobileInput: {
+		color: theme.DARK_GRAY,
 		borderBottomColor: theme.SECONDARY_COLOR,
 		borderBottomWidth: 1,
 		width: wp(75),

@@ -57,12 +57,24 @@ export default StyleSheet.create({
 		marginLeft: 15,
 	},
 	chipContainer: {
-		flexDirection: 'row',
 		paddingVertical: hp(2),
 		paddingLeft: wp(6),
 	},
 	divider: {
 		height: 10,
 		backgroundColor: theme.MUTED_COLOR,
+	},
+	articlesContainer: {
+		backgroundColor: theme.MUTED_COLOR,
+		paddingBottom: hp(5),
+	},
+	acticlesHeading: {
+		color: theme.DARK_GRAY,
+		fontFamily: theme.BOLD_FONT,
+		paddingVertical: hp(3),
+		paddingLeft: wp(6),
+	},
+	articlesContent: {
+		paddingLeft: wp(6),
 	},
 });

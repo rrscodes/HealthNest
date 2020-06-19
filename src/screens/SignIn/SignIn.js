@@ -12,7 +12,7 @@ const SignIn = ({ authentication }) => {
 		authentication();
 	};
 	return (
-		<ScrollView contentContainerStyle={styles.container}>
+		<ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps={'always'}>
 			<StatusBar backgroundColor={theme.LIGHT_COLOR} barStyle={'dark-content'} />
 			<SafeAreaView>
 				<Image style={styles.logo} source={require('../../assets/images/Logo.png')} />

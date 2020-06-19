@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 import auth from './auth.reducer';
-
+import feeds from './feeds.reducer';
 const appReducer = combineReducers({
 	auth,
+	feeds,
 });
 
 const rootReducer = (state, action) => {
