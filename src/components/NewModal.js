@@ -97,7 +97,7 @@ const styles = {
 	},
 	closeBtn: {
 		position: 'absolute',
-		bottom: 5,
+		bottom: Platform.OS === 'android' ? 5 : 40,
 		alignSelf: 'center',
 	},
 };

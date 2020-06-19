@@ -148,9 +148,10 @@ const Routes = ({ auth, authentication }) => {
 		let token = await AsyncStorage.getItem('login_token');
 		token && authentication();
 		// setToken(token);
-		setTimeout(() => {
-			setIsLoading(false);
-		}, 1000);
+		// setTimeout(() => {
+		// 	setIsLoading(false);
+		// }, 100);
+		setIsLoading(false);
 	};
 
 	return (

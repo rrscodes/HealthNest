@@ -16,7 +16,7 @@ export default function Chip({ name }) {
 const styles = {
 	chipContainer: {
 		padding: 10,
-		paddingHorizontal: 20,
+		paddingHorizontal: 15,
 		borderRadius: 20,
 		borderColor: theme.LIGHT_GREEN,
 		borderWidth: 1,

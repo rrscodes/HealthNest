@@ -3,6 +3,7 @@ const initialState = {
 	feeds: [],
 };
 export default feeds = (state = initialState, action) => {
+	console.log(action.data);
 	switch (action.type) {
 		case FEEDS_SUCCESS:
 			return {
