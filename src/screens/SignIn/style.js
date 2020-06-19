@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, Platform } from 'react-native';
 import theme from '../../utils/theme';
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 function wp(percentage) {
@@ -13,50 +13,60 @@ function hp(percentage) {
 export default StyleSheet.create({
 	container: {
 		flex: 1,
+		justifyContent: 'center',
 		backgroundColor: theme.PRIMARY_BLUE,
+		marginHorizontal: wp(6),
 	},
-	content: {
-		marginHorizontal: wp(8),
+	logo: {
+		marginLeft: -10,
 	},
-	logo: { width: 140, height: 117, alignSelf: 'center', marginVertical: hp(6) },
+	flag: {
+		marginRight: 5,
+	},
+	inputContainer: {
+		flexDirection: 'row',
+		alignItems: 'center',
+	},
 	caption: {
-		fontFamily: theme.DEFAULT_FONT,
-		fontSize: 19,
-		color: theme.LIGHT_COLOR,
+		fontFamily: theme.BOLD_FONT,
+		fontSize: 24,
+		color: theme.DARK_GRAY,
 		paddingTop: 8,
-		paddingBottom: 20,
+		paddingBottom: hp(7),
 	},
-	eye: { position: 'absolute', right: 20, top: 30, elevation: 6 },
-	button: {
-		paddingVertical: 10,
-		borderRadius: 12,
-		marginVertical: 40,
-		alignSelf: 'center',
-		borderColor: theme.SECONDARY_GREEN,
-		borderWidth: 2,
+	mobileInput: {
+		borderBottomColor: theme.SECONDARY_COLOR,
+		borderBottomWidth: 1,
+		width: wp(75),
+		paddingBottom: Platform.OS === 'android' ? 0 : 5,
+		marginTop: Platform.OS === 'android' ? -10 : 0,
 	},
-	forgotText: {
-		alignSelf: 'flex-end',
-		color: theme.SECONDARY_GREEN,
+	phoneIcon: {
+		position: 'absolute',
+		right: 10,
+		top: Platform.OS === 'android' ? 5 : 0,
+	},
+	infoText: {
+		color: theme.SECONDARY_COLOR,
 		fontFamily: theme.DEFAULT_FONT,
+		fontSize: 12,
+		paddingTop: hp(5),
+		paddingBottom: hp(10),
+		lineHeight: 18,
 	},
 	loginBtn: {
-		marginVertical: 40,
-		backgroundColor: theme.PRIMARY_GREEN,
-		paddingHorizontal: 20,
-		alignSelf: 'flex-end',
-		borderRadius: 20,
-		paddingVertical: 8,
-		shadowOffset: {
-			width: 5,
-			height: 3,
-		},
-		shadowColor: 'black',
-		shadowOpacity: 0.2,
-		elevation: 5,
+		paddingHorizontal: 30,
+		alignSelf: 'center',
+		paddingVertical: 20,
 	},
 	loginText: {
+		fontFamily: theme.BOLD_FONT,
+		fontSize: theme.FONT_SIZE_MEDIUM,
+	},
+	mobileLabel: {
+		fontSize: theme.FONT_SIZE_SMALL,
+		color: theme.SECONDARY_COLOR,
 		fontFamily: theme.DEFAULT_FONT,
-		color: theme.LIGHT_COLOR,
+		paddingBottom: 5,
 	},
 });

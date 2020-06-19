@@ -27,13 +27,13 @@ const AppTabsScreen = () => (
 		shifting={true}
 		sceneAnimationEnabled={true}
 		tabBarOptions={{
-			activeTintColor: theme.LIGHT_COLOR,
-			inactiveTintColor: theme.DULL_WHITE,
+			activeTintColor: theme.PRIMARY_COLOR,
+			inactiveTintColor: theme.SECONDARY_COLOR,
 			activeBackgroundColor: theme.DARK_BLUE,
 			inactiveBackgroundColor: theme.DARK_BLUE,
 			style: {
-				backgroundColor: theme.DARK_BLUE,
-				borderTopColor: theme.DARK_BLUE,
+				backgroundColor: theme.LIGHT_COLOR,
+				borderTopColor: theme.SECONDARY_COLOR,
 			},
 		}}
 	>
