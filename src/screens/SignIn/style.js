@@ -14,8 +14,8 @@ export default StyleSheet.create({
 	container: {
 		flex: 1,
 		justifyContent: 'center',
-		backgroundColor: theme.PRIMARY_BLUE,
-		marginHorizontal: wp(6),
+		paddingHorizontal: wp(6),
+		backgroundColor: theme.LIGHT_COLOR,
 	},
 	logo: {
 		marginLeft: -10,

@@ -3,6 +3,7 @@ export default {
 	SECONDARY_COLOR: '#A5B1C2',
 	DARK_GRAY: '#545B63',
 	LIGHT_COLOR: '#ffffff',
+	LIGHT_GREEN: '#CCEEE6',
 	MUTED_COLOR: '#E8EBEF',
 	DULL_WHITE: 'rgba(255, 255, 255, 0.5)',
 	RED_COLOR: '#D0152B',

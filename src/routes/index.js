@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Image } from 'react-native';
 import { connect } from 'react-redux';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import AsyncStorage from '@react-native-community/async-storage';
 
 import Splash from '../screens/Splash';
@@ -14,6 +15,7 @@ import Library from '../screens/Library';
 import Messages from '../screens/Messages';
 import Services from '../screens/Services';
 import Question from '../screens/Question';
+import NewModal from '../components/NewModal';
 
 import theme from '../utils/theme';
 import { navigationRef } from './RootNavigation';
@@ -41,28 +43,44 @@ const AppTabsScreen = () => (
 			name='Feed'
 			component={Feed}
 			options={{
-				tabBarIcon: (props) => <AntDesign name='home' size={props.size} color={props.color} />,
+				tabBarIcon: (props) => <SimpleLineIcons name='feed' size={props.size} color={props.color} />,
 			}}
 		/>
 		<AppTabs.Screen
 			name='Library'
 			component={Library}
 			options={{
-				tabBarIcon: (props) => <AntDesign name='search1' size={props.size} color={props.color} />,
+				tabBarIcon: (props) => <SimpleLineIcons name='book-open' size={props.size} color={props.color} />,
 			}}
+		/>
+		<AppTabs.Screen
+			name='New'
+			component={Feed}
+			options={{
+				tabBarLabel: '',
+				tabBarIcon: (props) => (
+					<Image source={require('../assets/images/Default.png')} style={{ position: 'absolute', top: 3 }} />
+				),
+			}}
+			listeners={({ navigation }) => ({
+				tabPress: (e) => {
+					e.preventDefault();
+					navigation.navigate('NewModal');
+				},
+			})}
 		/>
 		<AppTabs.Screen
 			name='Messages'
 			component={Messages}
 			options={{
-				tabBarIcon: (props) => <FontAwesome name='calendar-plus-o' size={props.size} color={props.color} />,
+				tabBarIcon: (props) => <SimpleLineIcons name='envelope-letter' size={props.size} color={props.color} />,
 			}}
 		/>
 		<AppTabs.Screen
 			name='Services'
 			component={Services}
 			options={{
-				tabBarIcon: (props) => <AntDesign name='user' size={props.size} color={props.color} />,
+				tabBarIcon: (props) => <AntDesign name='medicinebox' size={props.size} color={props.color} />,
 			}}
 		/>
 	</AppTabs.Navigator>
@@ -89,10 +107,32 @@ const AppStack = () => {
 				},
 				headerTitleStyle: { color: theme.LIGHT_COLOR },
 				headerTintColor: theme.LIGHT_COLOR,
+				cardStyle: { backgroundColor: 'transparent' },
+				cardOverlayEnabled: true,
+				cardStyleInterpolator: ({ current: { progress } }) => ({
+					cardStyle: {
+						opacity: progress.interpolate({
+							inputRange: [0, 0.5, 0.9, 1],
+							outputRange: [0, 0.25, 0.7, 1],
+						}),
+					},
+					overlayStyle: {
+						opacity: progress.interpolate({
+							inputRange: [0, 1],
+							outputRange: [0, 0.5],
+							extrapolate: 'clamp',
+						}),
+					},
+				}),
 			}}
 		>
 			<Stack.Screen name='Feed' component={AppTabsScreen} options={{ headerShown: false }} />
 			<Stack.Screen name='Question' component={Question} options={{ headerTitle: 'Question' }} />
+			<Stack.Screen
+				name='NewModal'
+				component={NewModal}
+				options={{ animationEnabled: true, headerShown: false, mode: 'modal' }}
+			/>
 		</Stack.Navigator>
 	);
 };
