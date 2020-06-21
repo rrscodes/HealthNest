@@ -149,7 +149,7 @@ const PostCard = ({ data, onPressMore, onPressShare }) => {
 					{like.includes(data.id) ? (
 						<Animatable.Image source={require('../../assets/images/375-thumbs-up-1.png')} animation='bounceIn' />
 					) : (
-						<Image source={require('../../assets/images/empty_question.png')} style={postStyle.iconsReaction} />
+						<Image source={require('../../assets/images/Like.png')} style={postStyle.iconsReaction} />
 					)}
 					<Text style={postStyle.question}> 24</Text>
 				</TouchableOpacity>

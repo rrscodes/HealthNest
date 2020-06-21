@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* healthNestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* healthNestTests.m */; };
 		01C3DF282497FA3200774668 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01C3DF272497FA3200774668 /* AppCenter-Config.plist */; };
-		03C48A1A8309453C8EE61438 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17890E80BE834A49BBB3A0DB /* FontAwesome5_Solid.ttf */; };
 		0BF66749BF2740BC84FAC6C0 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9072401B1FE49E785DB92E9 /* Montserrat-BlackItalic.ttf */; };
-		12AE508A51FA439CA4D7E2C3 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF5210736FCE47B2AC43FF28 /* Foundation.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -23,9 +21,6 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* healthNestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* healthNestTests.m */; };
-		31CD7DA361F9431A96285500 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 387040ABF5F84D81B4B78124 /* MaterialCommunityIcons.ttf */; };
-		339385128CF64AD9A03C98EA /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A69AC84237643E59E4A9F2A /* Ionicons.ttf */; };
-		34FE2B524B6645A4B1FA851B /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B46CBCB0BD94FFDB90A91B5 /* Octicons.ttf */; };
 		37FCE6C5CF52473EBFF330FB /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB09A7CB59CF48BCBBFE93E0 /* Montserrat-SemiBold.ttf */; };
 		3FCA25B6CE2448459360C1C0 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0660691ED6734C68ADB89538 /* Montserrat-LightItalic.ttf */; };
 		40C42D8C00C740E0BCF3560C /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A785CC9ABFB4C1D951ED57A /* Montserrat-Thin.ttf */; };
@@ -33,27 +28,16 @@
 		4CFBE58FF3684BC8AFDE78DF /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7142A7D68EFC40789D27B573 /* Montserrat-ExtraLightItalic.ttf */; };
 		5391460AE6B091038E6F2B1F /* libPods-healthNest-healthNestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 897CD4FE302DB101AF21785B /* libPods-healthNest-healthNestTests.a */; };
 		5C9C8C1BF147940F868DFD55 /* libPods-healthNest-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E71228527C44E4BD613D54A /* libPods-healthNest-tvOS.a */; };
-		5D816C072EC14878B5E021D4 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA6AE006E3F64973B3F5948A /* SimpleLineIcons.ttf */; };
 		612C40DD245C48F3950A8B5E /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45AFD02C2DAC41D491813C07 /* Montserrat-Regular.ttf */; };
-		6D3F88CE33264DF08DD17095 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52E8EF0C68014A37900E60E0 /* Zocial.ttf */; };
-		725E0710A7E949BE8DDB2036 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBD2C3DCC020475BA43DD7F2 /* Entypo.ttf */; };
 		776CCA02E1314183BEDB81F3 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 16C1354C5DCB4F15A72F59D7 /* Montserrat-ThinItalic.ttf */; };
 		790B14DF08004F018F395B1C /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 173D8A97F9D142638E0D5AC0 /* Montserrat-Italic.ttf */; };
 		89276444CF09AC7FB860A21D /* libPods-healthNest-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D0F0701497CD65216EB5FC /* libPods-healthNest-tvOSTests.a */; };
-		96106C1613B943BBAD415E3E /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A28A1A6DCE074BDB9A28038A /* AntDesign.ttf */; };
 		A00A99E76A2140A2A51E92DB /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39CBCBC7ED6C49A08D616D74 /* Montserrat-ExtraBold.ttf */; };
 		A57496313B9949189C770E01 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F06DB3BFEA174F84AF2411CF /* Montserrat-ExtraBoldItalic.ttf */; };
 		B5C3FAEA2E074D16B5E41018 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0F116DCC66A4D1A8B449284 /* Montserrat-Light.ttf */; };
 		C25469E83D964E07B3D35C5D /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCB959634B7A488AB0393977 /* Montserrat-Bold.ttf */; };
-		CB21B68E78F942E295D8DB62 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E398168B9247FABA606409 /* Feather.ttf */; };
 		D0D1CC32E405455CADABD7BD /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF947EC51D31485E905F64A5 /* Montserrat-BoldItalic.ttf */; };
-		D21AC73927C94EC4A3D9C544 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7EABA7DC6B844ED0AF983DC3 /* MaterialIcons.ttf */; };
-		DAD48947E9DF4FE3896C69C5 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B84EC6277F504233AACAFA39 /* Fontisto.ttf */; };
-		DD1D253632214D1D97792DEA /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3FAD7F4055F4D47831B2008 /* FontAwesome5_Brands.ttf */; };
-		E93A10EFECA8492093EB10D5 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADEA4C569CDA4545AE77D5C8 /* FontAwesome5_Regular.ttf */; };
-		EA4E6E0844F14377B0485748 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 134ACAFA77CC4EEF9340E0A4 /* FontAwesome.ttf */; };
 		EB07E31A7A144A2DB8312B32 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42E3689491F94669BDB0C4E4 /* Montserrat-MediumItalic.ttf */; };
-		F5051997F1FC49B686C03F18 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 749539FD19BA4532AD207796 /* EvilIcons.ttf */; };
 		FC8CFF189D6B4741BFF0ABA1 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F778175319114926916C76C6 /* Montserrat-Black.ttf */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +66,7 @@
 		01C3DF272497FA3200774668 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "healthNest/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		0660691ED6734C68ADB89538 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-LightItalic.ttf"; path = "../assets/fonts/Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
 		134ACAFA77CC4EEF9340E0A4 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* healthNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* HealthNest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthNest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = healthNest/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = healthNest/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -302,7 +286,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* healthNest.app */,
+				13B07F961A680F5B00A75B9A /* HealthNest.app */,
 				00E356EE1AD99517003FC87E /* healthNestTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* healthNest-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* healthNest-tvOSTests.xctest */,
@@ -351,7 +335,7 @@
 			);
 			name = healthNest;
 			productName = healthNest;
-			productReference = 13B07F961A680F5B00A75B9A /* healthNest.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* HealthNest.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* healthNest-tvOS */ = {
@@ -474,22 +458,6 @@
 				4741DF5183DF4C3A8D1E987D /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				40C42D8C00C740E0BCF3560C /* Montserrat-Thin.ttf in Resources */,
 				776CCA02E1314183BEDB81F3 /* Montserrat-ThinItalic.ttf in Resources */,
-				96106C1613B943BBAD415E3E /* AntDesign.ttf in Resources */,
-				725E0710A7E949BE8DDB2036 /* Entypo.ttf in Resources */,
-				F5051997F1FC49B686C03F18 /* EvilIcons.ttf in Resources */,
-				CB21B68E78F942E295D8DB62 /* Feather.ttf in Resources */,
-				EA4E6E0844F14377B0485748 /* FontAwesome.ttf in Resources */,
-				DD1D253632214D1D97792DEA /* FontAwesome5_Brands.ttf in Resources */,
-				E93A10EFECA8492093EB10D5 /* FontAwesome5_Regular.ttf in Resources */,
-				03C48A1A8309453C8EE61438 /* FontAwesome5_Solid.ttf in Resources */,
-				DAD48947E9DF4FE3896C69C5 /* Fontisto.ttf in Resources */,
-				12AE508A51FA439CA4D7E2C3 /* Foundation.ttf in Resources */,
-				339385128CF64AD9A03C98EA /* Ionicons.ttf in Resources */,
-				31CD7DA361F9431A96285500 /* MaterialCommunityIcons.ttf in Resources */,
-				D21AC73927C94EC4A3D9C544 /* MaterialIcons.ttf in Resources */,
-				34FE2B524B6645A4B1FA851B /* Octicons.ttf in Resources */,
-				5D816C072EC14878B5E021D4 /* SimpleLineIcons.ttf in Resources */,
-				6D3F88CE33264DF08DD17095 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +491,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		19FC7ACD8E3D8C437F45626A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -585,7 +553,7 @@
 		};
 		7DC725EA29C679F3E2347C3D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -626,7 +594,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-healthNest/Pods-healthNest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
@@ -889,8 +857,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = healthNest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roshan.healthNest;
+				PRODUCT_NAME = HealthNest;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -912,8 +880,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = healthNest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roshan.healthNest;
+				PRODUCT_NAME = HealthNest;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

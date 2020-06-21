@@ -12,7 +12,7 @@ const SignIn = ({ authentication }) => {
 		authentication();
 	};
 	return (
-		<ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps={'always'}>
+		<ScrollView contentContainerStyle={styles.container}>
 			<StatusBar backgroundColor={theme.LIGHT_COLOR} barStyle={'dark-content'} />
 			<SafeAreaView>
 				<Image style={styles.logo} source={require('../../assets/images/Logo.png')} />
@@ -22,6 +22,7 @@ const SignIn = ({ authentication }) => {
 					<Image style={styles.flag} source={require('../../assets/images/IN.png')} />
 					<Image style={styles.flag} source={require('../../assets/images/arrow-down.png')} />
 					<TextInput
+						testID='mobileNo'
 						style={styles.mobileInput}
 						placeholder='Enter Mobile Number'
 						placeholderTextColor={theme.SECONDARY_COLOR}

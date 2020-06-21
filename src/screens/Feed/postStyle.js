@@ -80,8 +80,8 @@ export default StyleSheet.create({
 		marginVertical: 10,
 	},
 	iconsReaction: {
-		height: 30,
-		width: 30,
+		height: 20,
+		width: 20,
 	},
 	flexContainerEven: {
 		flexDirection: 'row',
