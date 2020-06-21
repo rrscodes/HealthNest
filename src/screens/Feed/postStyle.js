@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, Platform } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import theme from '../../utils/theme';
 const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
 function wp(percentage) {
