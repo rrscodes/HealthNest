@@ -153,6 +153,17 @@ const Feed = ({ navigation, feeds, getFeeds }) => {
 							}}
 						/>
 					</View>
+
+					<FlatList
+						data={feeds.feeds}
+						keyExtractor={(item) => {
+							return item.id;
+						}}
+						ItemSeparatorComponent={() => <View style={styles.divider} />}
+						renderItem={({ item }) => {
+							return <PostCard data={item} />;
+						}}
+					/>
 				</ScrollView>
 			</SafeAreaView>
 		);

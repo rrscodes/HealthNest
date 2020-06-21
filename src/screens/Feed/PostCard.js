@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
 import postStyle from './postStyle';
 
 const PostCard = ({ data }) => {
+	const [reaction, setReaction] = useState('');
+	const [like, setLike] = useState([]);
+	console.log(like);
 	return (
 		<View style={postStyle.cardContainer}>
 			<View style={postStyle.flexContainerSpace}>
@@ -73,11 +77,45 @@ const PostCard = ({ data }) => {
 				<Image source={require('../../assets/images/user.png')} style={postStyle.picOverLap} />
 				<Image source={require('../../assets/images/user.png')} style={postStyle.picOverLap} />
 				<Text style={postStyle.members}>{data.ppl}</Text>
+				{reaction === data.id && (
+					<View style={postStyle.reactionContainer}>
+						<TouchableOpacity
+							style={postStyle.flexContainer}
+							onPress={() => {
+								setReaction(false);
+								setLike([...like, data.id]);
+							}}
+						>
+							<Animatable.Image source={require('../../assets/images/375-thumbs-up-1.png')} animation='bounceIn' />
+							<Text style={postStyle.name}> 10</Text>
+						</TouchableOpacity>
+						<TouchableOpacity style={postStyle.flexContainer}>
+							<Animatable.Image source={require('../../assets/images/001-grinning-face.png')} animation='bounceIn' />
+							<Text style={postStyle.name}> 10</Text>
+						</TouchableOpacity>
+						<TouchableOpacity style={postStyle.flexContainer}>
+							<Animatable.Image
+								source={require('../../assets/images/029-sad-but-relieved-face.png')}
+								animation='bounceIn'
+							/>
+							<Text style={postStyle.name}> 10</Text>
+						</TouchableOpacity>
+					</View>
+				)}
 			</View>
 			<View style={postStyle.divider} />
 			<View style={postStyle.flexContainerEven}>
-				<TouchableOpacity style={postStyle.flexContainer}>
-					<Image source={require('../../assets/images/empty_question.png')} style={postStyle.iconsReaction} />
+				<TouchableOpacity
+					style={postStyle.flexContainer}
+					onPress={() => {
+						setReaction(data.id);
+					}}
+				>
+					{like.includes(data.id) ? (
+						<Animatable.Image source={require('../../assets/images/375-thumbs-up-1.png')} animation='bounceIn' />
+					) : (
+						<Image source={require('../../assets/images/empty_question.png')} style={postStyle.iconsReaction} />
+					)}
 					<Text style={postStyle.question}> 24</Text>
 				</TouchableOpacity>
 				<TouchableOpacity style={postStyle.flexContainer}>

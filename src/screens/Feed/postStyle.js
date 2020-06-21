@@ -98,4 +98,21 @@ export default StyleSheet.create({
 		fontSize: 12,
 		paddingLeft: 30,
 	},
+	reactionContainer: {
+		flexDirection: 'row',
+		justifyContent: 'space-evenly',
+		alignItems: 'center',
+		borderRadius: 40,
+		elevation: 5,
+		shadowOffset: {
+			width: 2,
+			height: 1,
+		},
+		shadowColor: 'black',
+		shadowOpacity: 0.2,
+		paddingVertical: 15,
+		position: 'absolute',
+		backgroundColor: theme.LIGHT_COLOR,
+		width: wp(50),
+	},
 });
