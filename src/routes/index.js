@@ -168,7 +168,6 @@ const Routes = ({ auth, authentication }) => {
 };
 
 const mapStateToProps = (state) => {
-	console.log(state);
 	return {
 		auth: state.auth,
 	};

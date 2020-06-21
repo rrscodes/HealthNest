@@ -167,6 +167,7 @@ export default StyleSheet.create({
 		backgroundColor: theme.LIGHT_GREEN,
 		height: 40,
 		position: 'absolute',
+		zIndex: -1,
 	},
 	reactionName: {
 		fontFamily: theme.LIGHT_FONT,
