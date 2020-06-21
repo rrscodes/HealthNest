@@ -9,6 +9,10 @@ import {
 	FlatList,
 	TouchableOpacity,
 	ActivityIndicator,
+	ScrollView,
+	LayoutAnimation,
+	Platform,
+	UIManager,
 } from 'react-native';
 
 import styles from './style';
@@ -16,7 +20,6 @@ import theme from '../../utils/theme';
 import Chip from '../../components/Chip';
 import ArticlesCard from '../../components/ArticlesCard';
 import PostCard from './PostCard';
-import postStyle from './postStyle';
 
 const feedTypes = ['All Posts', 'News', 'Diet', 'LifeStyle', 'Symptoms', 'Cheif Complaints'];
 const articlesData = [
@@ -51,12 +54,25 @@ const articlesData = [
 		article: 'Genetic testing plays an important role in prevention of cancer orem ipsum...',
 	},
 ];
-
+if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
+	UIManager.setLayoutAnimationEnabledExperimental(true);
+}
 const Feed = ({ navigation, feeds, getFeeds }) => {
+	let offset = 0;
+	const [direction, setDirection] = useState(true);
 	useEffect(() => {
 		getFeeds();
 	}, []);
-	if (feeds.feeds.length == 0) {
+
+	const onScroll = (event) => {
+		let currentOffset = event.nativeEvent.contentOffset.y;
+		let currentDirection = currentOffset > offset ? false : true;
+		offset = currentOffset;
+		LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+		setDirection(currentDirection);
+	};
+
+	if (feeds.feeds.length === 0) {
 		return (
 			<View style={styles.loaderContainer}>
 				<ActivityIndicator size='large' color={theme.PRIMARY_COLOR} />
@@ -64,10 +80,10 @@ const Feed = ({ navigation, feeds, getFeeds }) => {
 		);
 	} else {
 		return (
-			<View style={styles.container}>
+			<SafeAreaView style={styles.container}>
 				<StatusBar backgroundColor={theme.LIGHT_COLOR} barStyle={'dark-content'} />
-				<SafeAreaView>
-					<View style={styles.content}>
+				<View style={styles.content}>
+					{direction && (
 						<View style={styles.headerContainer}>
 							<View>
 								<Text style={styles.headerText}>COMMUNITY</Text>
@@ -78,33 +94,39 @@ const Feed = ({ navigation, feeds, getFeeds }) => {
 							</View>
 							<Image source={require('../../assets/images/user.png')} />
 						</View>
-						<View style={styles.searchBoxContainer}>
-							<View>
-								<TextInput
-									style={styles.searchBox}
-									placeholder='Search posts and members'
-									placeholderTextColor={theme.SECONDARY_COLOR}
-								/>
-								<Image style={styles.searchIcon} source={require('../../assets/images/search.png')} />
-							</View>
-							<Image style={styles.bellIcon} source={require('../../assets/images/bell.png')} />
+					)}
+					<View style={styles.searchBoxContainer}>
+						<View>
+							<TextInput
+								style={styles.searchBox}
+								placeholder='Search posts and members'
+								placeholderTextColor={theme.SECONDARY_COLOR}
+							/>
+							<Image style={styles.searchIcon} source={require('../../assets/images/search.png')} />
 						</View>
+						<Image style={styles.bellIcon} source={require('../../assets/images/bell.png')} />
 					</View>
-					<View>
-						<FlatList
-							contentContainerStyle={styles.chipContainer}
-							data={feedTypes}
-							horizontal={true}
-							showsHorizontalScrollIndicator={false}
-							keyExtractor={(index) => {
-								return index;
-							}}
-							renderItem={({ item }) => {
-								return <Chip name={item} />;
-							}}
-						/>
-					</View>
-					<View style={styles.divider} />
+				</View>
+				<View>
+					<FlatList
+						contentContainerStyle={styles.chipContainer}
+						data={feedTypes}
+						horizontal={true}
+						showsHorizontalScrollIndicator={false}
+						keyExtractor={(index) => {
+							return index;
+						}}
+						renderItem={({ item }) => {
+							return <Chip name={item} />;
+						}}
+					/>
+				</View>
+				<View style={[styles.divider, { height: direction ? 10 : 1 }]} />
+				<ScrollView
+					nestedScrollEnabled={true}
+					scrollEventThrottle={600}
+					onMomentumScrollBegin={(event) => onScroll(event)}
+				>
 					<FlatList
 						data={feeds.feeds}
 						keyExtractor={(item) => {
@@ -131,8 +153,8 @@ const Feed = ({ navigation, feeds, getFeeds }) => {
 							}}
 						/>
 					</View>
-				</SafeAreaView>
-			</View>
+				</ScrollView>
+			</SafeAreaView>
 		);
 	}
 };

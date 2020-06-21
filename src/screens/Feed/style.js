@@ -27,7 +27,7 @@ export default StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		alignItems: 'center',
-		paddingVertical: 20,
+		paddingTop: 20,
 	},
 	headerText: {
 		color: theme.SECONDARY_COLOR,
@@ -45,6 +45,7 @@ export default StyleSheet.create({
 	searchBoxContainer: {
 		flexDirection: 'row',
 		alignItems: 'center',
+		paddingTop: 20,
 	},
 	searchBox: {
 		borderColor: theme.LIGHT_GREEN,
