@@ -122,18 +122,18 @@ const PostCard = ({ data, onPressMore, onPressShare }) => {
 							}}
 						>
 							<Animatable.Image source={require('../../assets/images/375-thumbs-up-1.png')} animation='bounceIn' />
-							<Text style={postStyle.name}> 10</Text>
+							<Text style={postStyle.reactionName}> Like</Text>
 						</TouchableOpacity>
 						<TouchableOpacity style={postStyle.flexContainer}>
 							<Animatable.Image source={require('../../assets/images/001-grinning-face.png')} animation='bounceIn' />
-							<Text style={postStyle.name}> 10</Text>
+							<Text style={postStyle.reactionName}> HaHa</Text>
 						</TouchableOpacity>
 						<TouchableOpacity style={postStyle.flexContainer}>
 							<Animatable.Image
 								source={require('../../assets/images/029-sad-but-relieved-face.png')}
 								animation='bounceIn'
 							/>
-							<Text style={postStyle.name}> 10</Text>
+							<Text style={postStyle.reactionName}> Sad</Text>
 						</TouchableOpacity>
 					</View>
 				)}

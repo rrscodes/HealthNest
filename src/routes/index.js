@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
 import AsyncStorage from '@react-native-community/async-storage';
 
 import Splash from '../screens/Splash';
@@ -43,7 +44,12 @@ const AppTabsScreen = () => (
 			name='Feed'
 			component={Feed}
 			options={{
-				tabBarIcon: (props) => <SimpleLineIcons name='feed' size={props.size} color={props.color} />,
+				tabBarIcon: (props) => (
+					<>
+						<SimpleLineIcons name='feed' size={props.size} color={props.color} />
+						<Entypo name='dot-single' size={24} color={theme.RED_COLOR} style={{ position: 'absolute', right: 10 }} />
+					</>
+				),
 			}}
 		/>
 		<AppTabs.Screen

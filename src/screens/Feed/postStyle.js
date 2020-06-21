@@ -114,7 +114,7 @@ export default StyleSheet.create({
 		position: 'absolute',
 		top: -20,
 		backgroundColor: theme.LIGHT_COLOR,
-		width: wp(50),
+		width: wp(60),
 		zIndex: 10,
 	},
 	eventContainer: {
@@ -167,5 +167,8 @@ export default StyleSheet.create({
 		backgroundColor: theme.LIGHT_GREEN,
 		height: 40,
 		position: 'absolute',
+	},
+	reactionName: {
+		fontFamily: theme.LIGHT_FONT,
 	},
 });
