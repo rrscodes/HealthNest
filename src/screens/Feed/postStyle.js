@@ -115,4 +115,55 @@ export default StyleSheet.create({
 		backgroundColor: theme.LIGHT_COLOR,
 		width: wp(50),
 	},
+	eventContainer: {
+		backgroundColor: '#EEFAF9',
+		padding: 30,
+		marginHorizontal: -20,
+		marginBottom: -10,
+	},
+	buttonOutlined: {
+		borderColor: theme.LIGHT_GREEN,
+		borderWidth: 1,
+		borderRadius: 20,
+		paddingVertical: 10,
+		paddingHorizontal: 25,
+		marginLeft: 10,
+	},
+	buttonText: {
+		color: theme.PRIMARY_COLOR,
+		fontFamily: theme.DEFAULT_FONT,
+	},
+	picture: {
+		marginHorizontal: -15,
+		marginTop: 10,
+		width: wp(100),
+	},
+	tag: {
+		color: 'blue',
+		fontFamily: theme.DEFAULT_FONT,
+	},
+	pollContainer: {
+		flex: 1,
+		flexDirection: 'row',
+		alignItems: 'center',
+	},
+	pollTextContainer: {
+		flex: 0.9,
+		marginVertical: 10,
+		paddingVertical: 5,
+	},
+	pollPercentage: {
+		flex: 0.1,
+		fontFamily: theme.DEFAULT_FONT,
+	},
+	pollText: {
+		fontFamily: theme.DEFAULT_FONT,
+		zIndex: 2,
+		paddingLeft: 10,
+	},
+	pollProgressBar: {
+		backgroundColor: theme.LIGHT_GREEN,
+		height: 40,
+		position: 'absolute',
+	},
 });
