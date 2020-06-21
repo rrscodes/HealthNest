@@ -112,8 +112,10 @@ export default StyleSheet.create({
 		shadowOpacity: 0.2,
 		paddingVertical: 15,
 		position: 'absolute',
+		top: -20,
 		backgroundColor: theme.LIGHT_COLOR,
 		width: wp(50),
+		zIndex: 10,
 	},
 	eventContainer: {
 		backgroundColor: '#EEFAF9',

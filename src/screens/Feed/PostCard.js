@@ -3,12 +3,10 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
 import postStyle from './postStyle';
-import style from './style';
 
-const PostCard = ({ data }) => {
+const PostCard = ({ data, onPressMore, onPressShare }) => {
 	const [reaction, setReaction] = useState('');
 	const [like, setLike] = useState([]);
-	console.log(like);
 	return (
 		<View style={postStyle.cardContainer}>
 			<View style={postStyle.flexContainerSpace}>
@@ -24,7 +22,11 @@ const PostCard = ({ data }) => {
 					</View>
 					<Text style={postStyle.caption}>{data.caption}</Text>
 				</View>
-				<TouchableOpacity style={postStyle.moreIcon}>
+				<TouchableOpacity
+					style={postStyle.moreIcon}
+					onPress={onPressMore}
+					hitSlop={{ top: 20, bottom: 20, left: 50, right: 20 }}
+				>
 					<Image source={require('../../assets/images/ellipses.png')} />
 				</TouchableOpacity>
 			</View>
@@ -158,7 +160,7 @@ const PostCard = ({ data }) => {
 				<TouchableOpacity>
 					<Image source={require('../../assets/images/bookmark-full.png')} style={postStyle.iconsReaction} />
 				</TouchableOpacity>
-				<TouchableOpacity>
+				<TouchableOpacity onPress={onPressShare}>
 					<Image source={require('../../assets/images/share-alt.png')} style={postStyle.iconsReaction} />
 				</TouchableOpacity>
 			</View>

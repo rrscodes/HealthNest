@@ -20,6 +20,8 @@ import theme from '../../utils/theme';
 import Chip from '../../components/Chip';
 import ArticlesCard from '../../components/ArticlesCard';
 import PostCard from './PostCard';
+import ActionModal from './actionModal';
+import ShareModal from './ShareModal';
 
 const feedTypes = ['All Posts', 'News', 'Diet', 'LifeStyle', 'Symptoms', 'Cheif Complaints'];
 const articlesData = [
@@ -54,12 +56,15 @@ const articlesData = [
 		article: 'Genetic testing plays an important role in prevention of cancer orem ipsum...',
 	},
 ];
+
 if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
 	UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 const Feed = ({ navigation, feeds, getFeeds }) => {
 	let offset = 0;
 	const [direction, setDirection] = useState(true);
+	const [showActionModal, setShowActionModal] = useState(false);
+	const [showShareModal, setShowShareModal] = useState(false);
 	useEffect(() => {
 		getFeeds();
 	}, []);
@@ -134,7 +139,13 @@ const Feed = ({ navigation, feeds, getFeeds }) => {
 						}}
 						ItemSeparatorComponent={() => <View style={styles.divider} />}
 						renderItem={({ item }) => {
-							return <PostCard data={item} />;
+							return (
+								<PostCard
+									data={item}
+									onPressMore={() => setShowActionModal(true)}
+									onPressShare={() => setShowShareModal(true)}
+								/>
+							);
 						}}
 					/>
 
@@ -161,10 +172,18 @@ const Feed = ({ navigation, feeds, getFeeds }) => {
 						}}
 						ItemSeparatorComponent={() => <View style={styles.divider} />}
 						renderItem={({ item }) => {
-							return <PostCard data={item} />;
+							return (
+								<PostCard
+									data={item}
+									onPressMore={() => setShowActionModal(true)}
+									onPressShare={() => setShowShareModal(true)}
+								/>
+							);
 						}}
 					/>
 				</ScrollView>
+				<ActionModal isVisible={showActionModal} close={() => setShowActionModal(false)} />
+				<ShareModal isVisible={showShareModal} close={() => setShowShareModal(false)} />
 			</SafeAreaView>
 		);
 	}
